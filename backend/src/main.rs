@@ -51,7 +51,7 @@ async fn main() -> Result<()> {
 
     // Run our app
     let listener = TcpListener::bind("127.0.0.1:8000").await.unwrap();
-    println!("Backend running on http://{:?}", listener.local_addr());
+    println!("Backend running on http://127.0.0.1:8000");
     axum::serve(listener, app.into_make_service())
         .await
         .unwrap();
